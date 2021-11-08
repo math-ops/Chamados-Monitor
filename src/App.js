@@ -1,9 +1,21 @@
 import React from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import GlobalStyle from './style/global'
+import Login from './components/LoginScreen/index'
 
 function App() {
   return (
     <>
-      <h1>Chamados Monitor</h1>
+    <BrowserRouter>
+      <Switch>
+
+        <Route path="/" exact component={Login}/>
+
+      </Switch>
+
+    </BrowserRouter>
+
+     <GlobalStyle />
     </>
   );
 }
